@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", handler.HandleRoot)
+	http.HandleFunc("/", handler.HandlerSpecial)
 	http.HandleFunc("/users", handler.HandleUser)
 
 	log.Println("starting the server on :8181")
