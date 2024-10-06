@@ -1,4 +1,4 @@
-package main
+package data
 
 type User struct {
 	ID    string
@@ -6,7 +6,7 @@ type User struct {
 	Email string
 }
 
-var users = []User{
+var Users = []User{
 	{ID: "1", Name: "John Doe", Email: "john.doe@gmail.com"},
 	{ID: "2", Name: "Jane Smith", Email: "jane.smith@gmail.com"},
 	{ID: "3", Name: "Alice Johnson", Email: "alice.johnson@gmail.com"},

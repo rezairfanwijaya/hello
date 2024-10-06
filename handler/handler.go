@@ -1,12 +1,14 @@
-package main
+package handler
 
 import (
 	"encoding/json"
 	"log"
 	"net/http"
+
+	"github.com/rezairfanwijaya/hello.git/data"
 )
 
-func handleRoot(w http.ResponseWriter, r *http.Request) {
+func HandleRoot(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	response := map[string]string{
 		"message": "Hello, World!",
@@ -16,10 +18,10 @@ func handleRoot(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(response)
 }
 
-func handleUser(w http.ResponseWriter, r *http.Request) {
+func HandleUser(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	response := map[string]any{
-		"data": users,
+		"data": data.Users,
 	}
 
 	log.Printf("success send response")
