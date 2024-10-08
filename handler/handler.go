@@ -27,13 +27,3 @@ func HandleUser(w http.ResponseWriter, r *http.Request) {
 	log.Printf("success send response")
 	json.NewEncoder(w).Encode(response)
 }
-
-func HandlerSpecial(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	response := map[string]any{
-		"message": "assalamualaikum dari reza, jaga diri disana yaaa. Hati - hati",
-	}
-
-	log.Printf("success send response")
-	json.NewEncoder(w).Encode(response)
-}
